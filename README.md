@@ -15,6 +15,8 @@ products.
 *Administrators*: Want to be able to describe what one of their composite
 products is made of using other existing products in the system.
 
+*Administrators*: Want to be able to list all the Composite Products that exist in the system.
+
 **Context**
 
 Users of the system may stock products that are actually just a composite of
@@ -73,6 +75,18 @@ like for those examples.
 - The Cancel button background colour is #bf2d22.
 
 - Client side validation described in Feature section is respected.
+
+- The React view `/composite-products` shows a list of all Composite Products in React
+
+- There is a button on the list page to go to the add view.
+
+- Clicking on a Composite Product in the list view goes to the edit view for that item.
+
+- The React view `/composite-products/add` shows an empty add form to create a new Composite Product and save it.
+
+- The React view `/composite-products/:uuid` shows the Composite Product with that UUID and allows the user to edit and save it.
+
+- The cancel button on the add and edit views returns the user back to the list view.
 
 ---
 
