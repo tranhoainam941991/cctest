@@ -72,6 +72,8 @@ like for those examples.
 
 - The Cancel button background colour is #bf2d22.
 
+- Client side validation described in Feature section is respected.
+
 ---
 
 # Related data structures that may help you
