@@ -31,32 +31,50 @@ on one should take the user to a screen where the user can edit it and save it.
 Build an add+edit form which lets users create a new or edit an existing Composite Product.
 
 The add+edit form allows the user to:
+
 1. Name their Composite Product
+
 2. Add Products and Groups to the Composite Product.
+
     - Product
+
         - Contains a **required** select input to choose a Product that exists in the system.
+
         - Contains a **required, positive, integer** input to enter the Quantity.
+
     - Group
+
         - Contains an optional text input titled 'Group Label'
+
         - Contains a way to let the user add more Products and Groups beneath it.
+
 3. Remove any Product or Group from the Composite Product.
 
 Mockups of Example 1, Example 2, and Example 3 show a wireframe of what the form may look
 like for those examples.
 
+
 **Acceptance Criteria**
+
 - The list view displays all Composite Products that exist.
+
 - Example 1, Example 2, Example 3 are all visually simlilar to the mockups in shape.
+
 - Example 1, Example 2, Example 3 are all presented correctly in the form and can be edited freely and saved.
+
 - New Composite Products can be created and edited by a user.
+
 - There is no limit to how deeply nested a Composite Product's Groups can be.
+
 - Automated tests for your components.
+
 - The Save button background colour is #32a852.
+
 - The Cancel button background colour is #bf2d22.
 
 ---
 
-# Related data structures that may help you #
+# Related data structures that may help you
 
 ```
 class ComponentProduct {
@@ -161,37 +179,37 @@ class CompositeProduct {
 }
 ```
 
-# API Endpoints #
+# API Endpoints
 
-### Note: ###
+### Note:
 Composite Products you create do not persist between server restarts.
 
-## GET /products ##
+## GET /products
 Returns a complete list of all Products in the system.
 
-## GET /composite-products ##
+## GET /composite-products
 Returns a complete list of all Composite Products in the system.
 
-## POST /composite-products ##
+## POST /composite-products
 Saves the supplied Composite Product into the system.
 
-## PUT /composite-products/:uuid ##
+## PUT /composite-products/:uuid
 Updates the matching Composite Product in the system with the supplied data.
 
-## GET /composite-products/:uuid ##
+## GET /composite-products/:uuid
 Returns the matching Composite Product in the system if it exists.
 
 ---
 
-## Instructions and final notes ##
+## Instructions and final notes
 
-### To start api_server ### 
+### To start api_server 
 In the api_server folder, `npm install` and then `npm run start`. This will run on Port 3000 by default.
 Treat the api_server as a black box, please avoid modifying it.
 
 Put your React app in the webapp folder.
 
-### Do your best. ###
+### Do your best.
 
 We work with Typescript, React and Redux so using those is preferred.
 **However**, you're welcome to use your own judgement to pick modules and tools that work for you. Using different modules won't disqualify you.
@@ -200,8 +218,13 @@ Incomplete projects are still accepted, do your best to show your skills. An att
 a feature (even incomplete) in the Story will always be scored higher than a `//TODO` comment.
 
 What we're looking at:
+
 - How you deal with nested forms that change as the user interacts with the UI.
+
 - How you structure your project files.
+
 - How you structure your components.
+
 - How you fulfill acceptance criteria.
+
 - How you deal with automated tests.
