@@ -74,6 +74,8 @@ like for those examples.
 
 - The Cancel button background colour is #bf2d22.
 
+- The Select input for the Product section on the form has an option for every Product in the system at (`GET /products`)
+
 - Client side validation described in Feature section is respected.
 
 - The React view `/composite-products` shows a list of all Composite Products in React
