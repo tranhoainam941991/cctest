@@ -1,22 +1,22 @@
 import React from "react";
 import _ from 'lodash'
 import {
-  useParams,
   useHistory
 } from "react-router-dom";
 
-import useGlobal from "../../../store";
-import ProductSelect from "./ProductSelect";
-import ProductGroup from "./ProductGroup";
+import useGlobal from "../../store";
+import ProductGroup from "../../components/ProductGroup";
 // TODO: handle access component by link (refresh page or enter link directly in the browser)
-const AddCompositeProducts = () => {
+const FormCompositeProduct = (props) => {
   const history = useHistory();
+  const [compositeProduct, setCompositeProduct] = React.useState(props.compositeProduct);
   const [globalState, globalActions] = useGlobal();
-  const [compositeProduct, setCompositeProduct] = React.useState({name: '', components: []});
-  console.log(compositeProduct);
   React.useEffect(() => {
     globalActions.products.getList();
   }, [])
+  React.useEffect(() => {
+    setCompositeProduct(props.compositeProduct);
+  }, [props.compositeProduct])
   const updateCompositeProduct = (path, data) => {
     const clone = _.cloneDeep(compositeProduct);
     _.set(clone, path, data);
@@ -35,6 +35,7 @@ const AddCompositeProducts = () => {
         break;
     }
     const clone = _.cloneDeep(compositeProduct);
+    console.log(clone, path)
     const target = _.get(clone, path);
     target.push(item);
     _.set(clone, path, target);
@@ -73,4 +74,4 @@ const AddCompositeProducts = () => {
   );
 };
 
-export default AddCompositeProducts;
+export default FormCompositeProduct;

@@ -5,9 +5,9 @@ import {
   Route,
   Link,
 } from "react-router-dom";
-import ListCompositeProducts from './components/composite-product/list';
-import EditCompositeProducts from './components/composite-product/form/edit';
-// import AddCompositeProducts from './components/composite-product/form/add';
+import ListCompositeProducts from './modules/composite-product/list';
+import EditCompositeProducts from './modules/composite-product/edit';
+import AddCompositeProducts from './modules/composite-product/add';
 function App() {
   return (
     <Router>
@@ -18,9 +18,9 @@ function App() {
         </ul>
 
         <Switch>
-          {/*<Route path="/composite-product/add">*/}
-          {/*  <AddCompositeProducts />*/}
-          {/*</Route>*/}
+          <Route path="/composite-product/add">
+            <AddCompositeProducts />
+          </Route>
           <Route path="/composite-product/:id">
             <EditCompositeProducts />
           </Route>

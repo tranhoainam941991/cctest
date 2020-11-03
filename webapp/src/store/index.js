@@ -7,7 +7,6 @@ const initialState = {
   status: "INITIAL",
   compositeProducts: [],
   products: [],
-  selectedCompositeProduct: null,
 };
 const useGlobal = globalHook(React, initialState, actions);
 

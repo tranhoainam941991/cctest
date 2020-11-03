@@ -7,7 +7,7 @@ import useGlobal from "../../store";
 
 const mapRepos = (items) => {
   return items.map(item => (
-    <h3 key={item.id}><Link to={`/composite-product/${item.id}`}>{item.name}</Link></h3>
+    <h3 key={item.id}><Link to={`/composite-product/${item.id}`} >{item.name}</Link></h3>
   ));
 };
 

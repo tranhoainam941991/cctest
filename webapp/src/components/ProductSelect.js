@@ -1,6 +1,6 @@
 import React from 'react';
 
-import useGlobal from "../../../store";
+import useGlobal from "../store";
 
 const ProductSelect = ({product, path, updateCompositeProduct, deleteCompositeProduct}) => {
   const [globalState, globalActions] = useGlobal();
@@ -22,6 +22,7 @@ const ProductSelect = ({product, path, updateCompositeProduct, deleteCompositePr
   return (<>
     <div className="display-block">
       <select onChange={onProductChange}>
+        <option></option>
         {products.map((item) => {
           return <option value={item.id} selected={product.productId === item.id}>{item.name}</option>
         })}
